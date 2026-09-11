@@ -1,0 +1,25 @@
+serial:
+  enabled: false
+  port: "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0"
+  baudrate: 115200
+  timeout_s: 0.20
+
+transmission:
+  allow_queries: false
+  allow_rc: false
+  allow_arming: false
+
+control:
+  frequency_hz: 50.0
+  command_timeout_s: 0.25
+  rc_min: 1000
+  rc_max: 2000
+  rc_neutral: 1500
+  throttle_min: 1000
+
+safety:
+  startup_mode: 0
+  require_finite_commands: true
+  reject_out_of_range: true
+  require_confirmed_fc_state: true
+  force_safe_state_on_timeout: true
