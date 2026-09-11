@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>flight_controller</name>
+  <version>0.1.0</version>
+  <description>Safety-first Duckiedrone flight-controller interface scaffold.</description>
+
+  <maintainer email="alla82gh@users.noreply.github.com">Abdallah Ghoul</maintainer>
+  <license>GPL-3.0-or-later</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>diagnostic_msgs</depend>
+  <depend>duckietown_msgs</depend>
+  <depend>rospy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <test_depend>python3</test_depend>
+</package>
