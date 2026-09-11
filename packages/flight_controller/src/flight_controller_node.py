@@ -41,7 +41,7 @@ class FlightControllerNode(DTROS):
 
         if serial_enabled or allow_queries or allow_rc or allow_arming:
             raise RuntimeError(
-                "Step 1F.2 is offline-only; serial and command transmission must remain disabled"
+                "Offline safety scaffold requires serial and command transmission to remain disabled"
             )
 
         frequency_hz = float(rospy.get_param("~control/frequency_hz", 50.0))
