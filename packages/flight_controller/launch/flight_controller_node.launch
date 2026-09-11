@@ -1,0 +1,16 @@
+<launch>
+  <arg name="veh" doc="Vehicle name, for example takwa"/>
+  <arg name="param_file_name" default="default"/>
+  <arg name="node_name" default="flight_controller_node"/>
+
+  <group ns="$(arg veh)">
+    <node name="$(arg node_name)"
+          pkg="flight_controller"
+          type="flight_controller_node.py"
+          output="screen"
+          required="true">
+      <rosparam command="load"
+                file="$(find flight_controller)/config/flight_controller_node/$(arg param_file_name).yaml"/>
+    </node>
+  </group>
+</launch>
