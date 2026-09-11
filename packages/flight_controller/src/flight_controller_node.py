@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 """Non-actuating ROS scaffold for the Duckiedrone flight-controller interface."""
 
+import os
+import sys
+
 import rospy
 
 from duckietown.dtros import DTROS, NodeType
 from duckietown_msgs.msg import DroneControl, DroneMode as DroneModeMsg
 from duckietown_msgs.srv import SetDroneMode, SetDroneModeResponse
+
+_SOURCE_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
+if _SOURCE_DIRECTORY not in sys.path:
+    sys.path.insert(0, _SOURCE_DIRECTORY)
 
 from safety_supervisor import (
     CommandLimits,
